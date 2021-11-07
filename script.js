@@ -1,27 +1,42 @@
 const waveArr = [
-  [-80, 0],
-  [-80, 10],
-  [-70, 20],
-  [-60, 30],
-  [-50, 30],
-  [-40, 30],
-  [-30, 30],
-  [-20, 20],
-  [-10, 0],
-  [-10, 10],
+  [-80, 30],
+  [-70, 30],
+  [-60, 20],
+  [-50, 0],
+  [-50, 10],
+  [-40, 0],
+  [-40, 10],
+  [-30, 20],
+  [-20, 30],
+  [-10, 30],
 ];
 
 const invertedWaveArr = [
-  [-80, 30],
-  [-80, 40],
-  [-70, 20],
+  [-80, 0],
+  [-70, 0],
   [-60, 10],
-  [-50, 10],
-  [-40, 10],
+  [-50, 20],
+  [-50, 30],
+  [-40, 20],
+  [-40, 30],
   [-30, 10],
+  [-20, 0],
+  [-10, 0],
+];
+
+const topWaveArr = [
+  [-80, 20],
+  [-70, 20],
+  [-60, 30],
+  [-50, 40],
+  [-50, 50],
+  [-50, 0],
+  [-40, 10],
+  [-40, 40],
+  [-40, 50],
+  [-30, 30],
   [-20, 20],
-  [-10, 30],
-  [-10, 40],
+  [-10, 20],
 ];
 
 function createWave(offsetX, offsetY, arr) {
@@ -36,22 +51,35 @@ function repeatWave(offsetY, arr) {
   let x = 0;
   let y = offsetY;
   for (let i = 0; i < width; i += 80) {
-    x += 80;
-    createWave(x, y, arr)
+    for (let i = 0; i < 3; i++) {
+      x += 80;
+      createWave(x, y, arr)
+    }
+    x += 90;
+    createWave(x, y, invertedWaveArr)
+    x += 10;
   }
 }
 
+let y1 = -35;
+let y2 = -30;
+
 function createPattern() {
-  let y = -30;
-  for (let i = 0; i < height; i += 80) {
+  for (let i = 0; i < height; i += 40) {
     for (let i = 0; i < 5; i++) {
-      y += 30;
-      repeatWave(y, invertedWaveArr)
-      repeatWave(y, waveArr)
+      y1 += 35;
+      y2 += 35;
+      repeatWave(y1, waveArr)
+      repeatWave(y2, invertedWaveArr)
     }
-    repeatWave(y + 30, waveArr)
-    y += 70;
-    repeatWave(y, invertedWaveArr)
+    y1 += 35;
+    y2 += 35;
+    repeatWave(y1, waveArr)
+    y1 += 45;
+    y2 += 45;
+    repeatWave(y2, topWaveArr)
+    y1 += 20;
+    y2 += 20;
   }
 }
 
@@ -59,7 +87,7 @@ function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('container');
   background(0);
-  fill(200);
+  fill(190);
 }
 
 
@@ -70,33 +98,3 @@ function draw() {
 
   noLoop();
 }
-
-//   square(80, 110, 10);
-//   square(80, 100, 10);
-//   square(80, 100, 10);
-//   square(90, 90, 10);
-//   square(90, 120, 10);
-//   square(100, 130, 10);
-//   square(100, 80, 10);
-//   square(110, 130, 10);
-//   square(110, 80, 10);
-//   square(120, 80, 10);
-//   square(120, 130, 10);
-//   square(130, 120, 10);
-//   square(130, 90, 10);
-//   square(140, 100, 10);
-//   square(140, 110, 10);
-//   square(150, 110, 10);
-//   square(150, 100, 10);
-//   square(160, 120, 10);
-//   square(160, 90, 10);
-//   square(170, 130, 10);
-//   square(170, 80, 10);
-//   square(180, 80, 10);
-//   square(180, 130, 10);
-//   square(190, 80, 10);
-//   square(190, 130, 10);
-//   square(200, 90, 10);
-//   square(200, 120, 10);
-//   square(210, 100, 10);
-//   square(210, 110, 10);
