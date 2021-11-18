@@ -57,34 +57,39 @@ const topArr = [
 ];
 
 let fade = 0;
+let state = 0;
 
 function draw() {
+  //Lägg till vilkor för
+  frameRate(15);
   noStroke();
 
   if (fade < 15) {
     setTimeout(() => {
       drawRow(arrOne, 0);
+      state++;
+      console.log(state);
     }, 0);
 
     setTimeout(() => {
       drawRow(arrTwo, 5);
-    }, 0);
+    }, 2000);
 
     setTimeout(() => {
       drawRow(arrOne, 40);
-    }, 0);
+    }, 4000);
 
     setTimeout(() => {
       drawRow(arrTwo, 45);
-    }, 0);
+    }, 6000);
 
     setTimeout(() => {
       drawRow(bottomArr, 70);
-    }, 0);
+    }, 8000);
 
     setTimeout(() => {
       drawRow(topArr, 130);
-    }, 0);
+    }, 10000);
 
     setTimeout(() => {
       drawRow(arrOne, 150);
@@ -92,25 +97,153 @@ function draw() {
 
     setTimeout(() => {
       drawRow(arrTwo, 155);
-    }, 0);
+    }, 2000);
 
     setTimeout(() => {
       drawRow(arrOne, 190);
-    }, 0);
+    }, 4000);
 
     setTimeout(() => {
       drawRow(arrTwo, 195);
-    }, 0);
+    }, 6000);
 
     setTimeout(() => {
       drawRow(bottomArr, 220);
-    }, 0);
+    }, 8000);
 
     setTimeout(() => {
       drawRow(topArr, 280);
-      // noLoop();
+    }, 10000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 300);
     }, 0);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 305);
+    }, 2000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 340);
+    }, 4000);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 345);
+    }, 6000);
+
+    setTimeout(() => {
+      drawRow(bottomArr, 370);
+    }, 8000);
+
+    setTimeout(() => {
+      drawRow(topArr, 430);
+    }, 10000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 450);
+    }, 0);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 455);
+    }, 2000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 490);
+    }, 4000);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 495);
+    }, 6000);
+
+    setTimeout(() => {
+      drawRow(bottomArr, 520);
+    }, 8000);
+
+    setTimeout(() => {
+      drawRow(topArr, 580);
+    }, 10000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 600);
+    }, 0);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 605);
+    }, 2000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 640);
+    }, 4000);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 645);
+    }, 6000);
+
+    setTimeout(() => {
+      drawRow(bottomArr, 670);
+    }, 8000);
+
+    setTimeout(() => {
+      drawRow(topArr, 730);
+    }, 10000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 750);
+    }, 0);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 755);
+    }, 2000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 790);
+    }, 4000);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 795);
+    }, 6000);
+
+    setTimeout(() => {
+      drawRow(bottomArr, 820);
+    }, 8000);
+
+    setTimeout(() => {
+      drawRow(topArr, 880);
+    }, 10000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 900);
+    }, 0);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 905);
+    }, 2000);
+
+    setTimeout(() => {
+      drawRow(arrOne, 940);
+    }, 4000);
+
+    setTimeout(() => {
+      drawRow(arrTwo, 945);
+    }, 6000);
+
+    setTimeout(() => {
+      drawRow(bottomArr, 970);
+    }, 8000);
+
+    setTimeout(() => {
+      drawRow(topArr, 1030);
+    }, 10000);
   }
+
+  // if (state === 300) {
+  //   // clear();
+  //   // state = 0;
+  //   fade = 0;
+  //   background(0);
+  //   // noLoop();
+  //   setup();
+  // }
 }
 
 function drawSquare(x, y) {
@@ -132,11 +265,5 @@ function drawRow(arr, offsetY) {
       y += offsetY;
       drawSquare(x, y);
     }
-  }
-}
-
-function drawLines(arr, offsetY) {
-  for (let i = 0; i < height; i += 40) {
-    drawRow(arr, offsetY);
   }
 }
