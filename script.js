@@ -1,7 +1,7 @@
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("container");
-  background(0);
+  background(123, 104, 238);
 }
 
 let arrOne = [
@@ -60,196 +60,58 @@ let fade = 0;
 let state = 0;
 
 function draw() {
-  //Lägg till vilkor för
-  frameRate(15);
+  frameRate(30);
   noStroke();
 
-  if (fade < 15) {
-    setTimeout(() => {
-      drawRow(arrOne, 0);
-      state++;
-      console.log(state);
-    }, 0);
+  state++;
 
-    setTimeout(() => {
-      drawRow(arrTwo, 5);
-    }, 2000);
+  if (fade < 11) {
+    if (frameCount % 1 === 0) drawRow(arrOne, 0);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 5);
+    if (frameCount % 3 === 0) drawRow(arrOne, 40);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 45);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 70);
+    if (frameCount % 6 === 0) drawRow(topArr, 130);
 
-    setTimeout(() => {
-      drawRow(arrOne, 40);
-    }, 4000);
+    if (frameCount % 1 === 0) drawRow(arrOne, 150);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 155);
+    if (frameCount % 3 === 0) drawRow(arrOne, 190);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 195);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 220);
+    if (frameCount % 6 === 0) drawRow(topArr, 280);
 
-    setTimeout(() => {
-      drawRow(arrTwo, 45);
-    }, 6000);
+    if (frameCount % 1 === 0) drawRow(arrOne, 300);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 305);
+    if (frameCount % 3 === 0) drawRow(arrOne, 340);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 345);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 370);
+    if (frameCount % 6 === 0) drawRow(topArr, 430);
 
-    setTimeout(() => {
-      drawRow(bottomArr, 70);
-    }, 8000);
+    if (frameCount % 1 === 0) drawRow(arrOne, 450);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 455);
+    if (frameCount % 3 === 0) drawRow(arrOne, 490);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 495);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 520);
+    if (frameCount % 6 === 0) drawRow(topArr, 580);
 
-    setTimeout(() => {
-      drawRow(topArr, 130);
-    }, 10000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 150);
-    }, 0);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 155);
-    }, 2000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 190);
-    }, 4000);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 195);
-    }, 6000);
-
-    setTimeout(() => {
-      drawRow(bottomArr, 220);
-    }, 8000);
-
-    setTimeout(() => {
-      drawRow(topArr, 280);
-    }, 10000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 300);
-    }, 0);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 305);
-    }, 2000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 340);
-    }, 4000);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 345);
-    }, 6000);
-
-    setTimeout(() => {
-      drawRow(bottomArr, 370);
-    }, 8000);
-
-    setTimeout(() => {
-      drawRow(topArr, 430);
-    }, 10000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 450);
-    }, 0);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 455);
-    }, 2000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 490);
-    }, 4000);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 495);
-    }, 6000);
-
-    setTimeout(() => {
-      drawRow(bottomArr, 520);
-    }, 8000);
-
-    setTimeout(() => {
-      drawRow(topArr, 580);
-    }, 10000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 600);
-    }, 0);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 605);
-    }, 2000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 640);
-    }, 4000);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 645);
-    }, 6000);
-
-    setTimeout(() => {
-      drawRow(bottomArr, 670);
-    }, 8000);
-
-    setTimeout(() => {
-      drawRow(topArr, 730);
-    }, 10000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 750);
-    }, 0);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 755);
-    }, 2000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 790);
-    }, 4000);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 795);
-    }, 6000);
-
-    setTimeout(() => {
-      drawRow(bottomArr, 820);
-    }, 8000);
-
-    setTimeout(() => {
-      drawRow(topArr, 880);
-    }, 10000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 900);
-    }, 0);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 905);
-    }, 2000);
-
-    setTimeout(() => {
-      drawRow(arrOne, 940);
-    }, 4000);
-
-    setTimeout(() => {
-      drawRow(arrTwo, 945);
-    }, 6000);
-
-    setTimeout(() => {
-      drawRow(bottomArr, 970);
-    }, 8000);
-
-    setTimeout(() => {
-      drawRow(topArr, 1030);
-    }, 10000);
+    if (frameCount % 1 === 0) drawRow(arrOne, 600);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 605);
+    if (frameCount % 3 === 0) drawRow(arrOne, 640);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 645);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 670);
+    if (frameCount % 6 === 0) drawRow(topArr, 730);
   }
 
-  // if (state === 300) {
-  //   // clear();
-  //   // state = 0;
-  //   fade = 0;
-  //   background(0);
-  //   // noLoop();
-  //   setup();
-  // }
+  if (state === 500) {
+    state = 0;
+    background(123, 104, 238);
+  }
 }
 
 function drawSquare(x, y) {
   fade += 0.1;
-
-  fill(255, 255, 255, fade);
+  if (frameCount % 1 === 0) fill(0, 0, 255, fade);
+  if (frameCount % 2 === 0) fill(138, 43, 226, fade);
   rect(x, y, 10);
 
   if (fade > 10) {
@@ -259,7 +121,7 @@ function drawSquare(x, y) {
 
 function drawRow(arr, offsetY) {
   for (let i = 0; i < width; i += 80) {
-    for (let j = 0; j < 10; j++) {
+    for (let j = 0; j < arr.length; j++) {
       let x = arr[j][0] + i;
       let y = arr[j][1];
       y += offsetY;
