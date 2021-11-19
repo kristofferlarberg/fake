@@ -123,7 +123,7 @@ function draw() {
     if (frameCount % 6 === 0) drawRow(topArr, 1080);
   }
 
-  if (state === 300) {
+  if (state === 200) {
     state = 0;
     background(123, 104, 238);
   }
