@@ -71,38 +71,59 @@ function draw() {
     if (frameCount % 3 === 0) drawRow(arrOne, 40);
     if (frameCount % 4 === 0) drawRow(arrTwo, 45);
     if (frameCount % 5 === 0) drawRow(bottomArr, 70);
-    if (frameCount % 6 === 0) drawRow(topArr, 130);
+    if (frameCount % 6 === 0) drawRow(topArr, 100);
 
-    if (frameCount % 1 === 0) drawRow(arrOne, 150);
-    if (frameCount % 2 === 0) drawRow(arrTwo, 155);
-    if (frameCount % 3 === 0) drawRow(arrOne, 190);
-    if (frameCount % 4 === 0) drawRow(arrTwo, 195);
-    if (frameCount % 5 === 0) drawRow(bottomArr, 220);
-    if (frameCount % 6 === 0) drawRow(topArr, 280);
+    if (frameCount % 1 === 0) drawRow(arrOne, 140);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 145);
+    if (frameCount % 3 === 0) drawRow(arrOne, 180);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 185);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 210);
+    if (frameCount % 6 === 0) drawRow(topArr, 240);
 
-    if (frameCount % 1 === 0) drawRow(arrOne, 300);
-    if (frameCount % 2 === 0) drawRow(arrTwo, 305);
-    if (frameCount % 3 === 0) drawRow(arrOne, 340);
-    if (frameCount % 4 === 0) drawRow(arrTwo, 345);
-    if (frameCount % 5 === 0) drawRow(bottomArr, 370);
-    if (frameCount % 6 === 0) drawRow(topArr, 430);
+    if (frameCount % 1 === 0) drawRow(arrOne, 280);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 285);
+    if (frameCount % 3 === 0) drawRow(arrOne, 320);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 325);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 350);
+    if (frameCount % 6 === 0) drawRow(topArr, 380);
 
-    if (frameCount % 1 === 0) drawRow(arrOne, 450);
-    if (frameCount % 2 === 0) drawRow(arrTwo, 455);
-    if (frameCount % 3 === 0) drawRow(arrOne, 490);
-    if (frameCount % 4 === 0) drawRow(arrTwo, 495);
-    if (frameCount % 5 === 0) drawRow(bottomArr, 520);
-    if (frameCount % 6 === 0) drawRow(topArr, 580);
+    if (frameCount % 1 === 0) drawRow(arrOne, 420);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 425);
+    if (frameCount % 3 === 0) drawRow(arrOne, 460);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 465);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 490);
+    if (frameCount % 6 === 0) drawRow(topArr, 520);
 
-    if (frameCount % 1 === 0) drawRow(arrOne, 600);
-    if (frameCount % 2 === 0) drawRow(arrTwo, 605);
-    if (frameCount % 3 === 0) drawRow(arrOne, 640);
-    if (frameCount % 4 === 0) drawRow(arrTwo, 645);
-    if (frameCount % 5 === 0) drawRow(bottomArr, 670);
-    if (frameCount % 6 === 0) drawRow(topArr, 730);
+    if (frameCount % 1 === 0) drawRow(arrOne, 560);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 565);
+    if (frameCount % 3 === 0) drawRow(arrOne, 600);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 605);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 630);
+    if (frameCount % 6 === 0) drawRow(topArr, 660);
+
+    if (frameCount % 1 === 0) drawRow(arrOne, 700);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 705);
+    if (frameCount % 3 === 0) drawRow(arrOne, 740);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 745);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 770);
+    if (frameCount % 6 === 0) drawRow(topArr, 800);
+
+    if (frameCount % 1 === 0) drawRow(arrOne, 840);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 845);
+    if (frameCount % 3 === 0) drawRow(arrOne, 880);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 885);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 910);
+    if (frameCount % 6 === 0) drawRow(topArr, 940);
+
+    if (frameCount % 1 === 0) drawRow(arrOne, 980);
+    if (frameCount % 2 === 0) drawRow(arrTwo, 985);
+    if (frameCount % 3 === 0) drawRow(arrOne, 1020);
+    if (frameCount % 4 === 0) drawRow(arrTwo, 1025);
+    if (frameCount % 5 === 0) drawRow(bottomArr, 1050);
+    if (frameCount % 6 === 0) drawRow(topArr, 1080);
   }
 
-  if (state === 500) {
+  if (state === 300) {
     state = 0;
     background(123, 104, 238);
   }
